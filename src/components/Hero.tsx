@@ -72,8 +72,7 @@ export default function Hero() {
                                     Olawale
                                 </span>
                                 <span className="text-[50px] leading-none">.</span>
-                                <span className="ml-2 px-2 py-1 text-xs font-bold text-gray-900 bg-green-500 rounded group-hover:bg-blue-500 transition-all">
-                                    DEV
+                                <span className="ml-1 px-2 py-1 text-xs font-bold text-gray-900 bg-green-500 rounded group-hover:bg-blue-500 transition-all">DEV
                                 </span>
                             </ScrollLink>
 
