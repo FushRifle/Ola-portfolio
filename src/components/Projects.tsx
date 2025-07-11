@@ -166,7 +166,7 @@ export default function Projects() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                 >
-                    <p className="text-white text-lg uppercase tracking-wider mb-2">My Work</p>
+                    <p className="text-black dark:text-white text-lg uppercase tracking-wider mb-2">My Work</p>
                     <h2 className="text-4xl font-bold text-gray-800 dark:text-white">Recent Projects</h2>
                 </motion.div>
 

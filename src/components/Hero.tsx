@@ -82,22 +82,36 @@ export default function Hero() {
                         {/* Mobile menu button */}
                         <button
                             onClick={() => setMenuOpen(!menuOpen)}
-                            className="block md:hidden"
+                            className="ml-auto md:hidden text-white focus:outline-none"
                             aria-label="Toggle menu"
                         >
-                            <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                            </svg>
+                            {menuOpen ? (
+                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        fillRule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clipRule="evenodd"
+                                    />
+                                </svg>
+                            ) : (
+                                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                                </svg>
+                            )}
                         </button>
 
+
                         {/* Nav links */}
-                        <nav className={`${menuOpen ? 'block' : 'hidden'} md:block`}>
-                            <ul className="flex flex-col md:flex-row md:space-x-6 text-white text-base pt-4 md:pt-0">
+                        <nav className="md:block">
+                            <ul className={`fixed top-14 left-0 w-full bg-black/90 backdrop-blur-sm text-white text-center transition-all duration-300 ease-in-out 
+        ${menuOpen ? 'opacity-100 max-h-[500px] py-4' : 'opacity-0 max-h-0 overflow-hidden'} 
+        md:static md:flex md:flex-row md:space-x-6 md:bg-transparent md:backdrop-blur-0 md:py-0 md:opacity-100 md:max-h-none`}>
                                 {['Home', 'About Me', 'Services', 'Projects', 'Contact'].map((item) => (
                                     <motion.li
                                         key={item}
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
+                                        className="md:p-4 py-2"
                                     >
                                         <ScrollLink
                                             to={item.replace(/\s+/g, '').toLowerCase()}
@@ -105,7 +119,7 @@ export default function Hero() {
                                             smooth={true}
                                             duration={500}
                                             offset={-70}
-                                            className={`block md:p-4 py-2 cursor-pointer ${item === 'Home' ? 'text-green-500' : 'hover:text-green-500 transition-colors'
+                                            className={`block cursor-pointer ${item === 'Home' ? 'text-green-500' : 'hover:text-green-500 transition-colors'
                                                 }`}
                                             activeClass="text-green-500"
                                             onClick={() => setMenuOpen(false)}
@@ -116,6 +130,7 @@ export default function Hero() {
                                 ))}
                             </ul>
                         </nav>
+
                     </motion.header>
 
                     {/* Hero Section */}

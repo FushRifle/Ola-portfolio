@@ -100,7 +100,7 @@ export default function Skills() {
             {/* Section Header */}
             <div className="text-center mb-16">
                 <motion.p
-                    className="text-white text-lg uppercase tracking-wider mb-2"
+                    className="text-black dark:text-white text-lg uppercase tracking-wider mb-2"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

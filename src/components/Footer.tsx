@@ -91,27 +91,30 @@ export default function Footer() {
                     </div>
 
                     {/* Footer Links */}
-                    {footerLinks.map((section, index) => (
-                        <div key={index}>
-                            <h3 className="text-lg font-semibold mb-4 text-white">{section.title}</h3>
-                            <ul className="space-y-3">
-                                {section.links.map((link, i) => (
-                                    <motion.li
-                                        key={i}
-                                        whileHover={{ x: 5 }}
-                                        transition={{ type: "spring", stiffness: 300 }}
-                                    >
-                                        <Link
-                                            href={link.href}
-                                            className="text-gray-400 hover:text-teal-400 transition-colors"
+                    <div className="flex flex-row flex-wrap gap-8 md:flex-col md:gap-0">
+                        {footerLinks.map((section, index) => (
+                            <div key={index} className="flex-1 min-w-[120px]">
+                                <h3 className="text-lg font-semibold mb-4 text-white">{section.title}</h3>
+                                <ul className="space-y-3">
+                                    {section.links.map((link, i) => (
+                                        <motion.li
+                                            key={i}
+                                            whileHover={{ x: 5 }}
+                                            transition={{ type: "spring", stiffness: 300 }}
                                         >
-                                            {link.name}
-                                        </Link>
-                                    </motion.li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+                                            <Link
+                                                href={link.href}
+                                                className="text-gray-400 hover:text-teal-400 transition-colors"
+                                            >
+                                                {link.name}
+                                            </Link>
+                                        </motion.li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+
 
                     {/* Contact Info */}
                     <div>
