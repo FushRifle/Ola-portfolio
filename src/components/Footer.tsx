@@ -91,9 +91,9 @@ export default function Footer() {
                     </div>
 
                     {/* Footer Links */}
-                    <div className="flex flex-row flex-wrap gap-8 md:flex-col md:gap-0">
+                    <div className="flex flex-col md:flex-row flex-wrap gap-8">
                         {footerLinks.map((section, index) => (
-                            <div key={index} className="flex-1 min-w-[120px]">
+                            <div key={index} className="flex-1 min-w-[140px]">
                                 <h3 className="text-lg font-semibold mb-4 text-white">{section.title}</h3>
                                 <ul className="space-y-3">
                                     {section.links.map((link, i) => (
@@ -114,7 +114,6 @@ export default function Footer() {
                             </div>
                         ))}
                     </div>
-
 
                     {/* Contact Info */}
                     <div>
