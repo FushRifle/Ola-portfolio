@@ -31,7 +31,7 @@ const projects: Project[] = [
         techStack: ["WebSockets", "React", "Node.js", "MongoDB"]
     },
     {
-        title: "Parenting Guide",
+        title: "Parenting & More",
         description:
             "An elegant, content-driven website offering curated parenting resources, expert articles, and practical guides. Designed to help parents navigate challenges and milestones, featuring a clean interface and structured content management for easy updates.",
         liveUrl: "https://parentingandmore.vercel.app",
