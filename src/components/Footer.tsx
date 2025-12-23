@@ -134,12 +134,6 @@ export default function Footer() {
                         <Link href="/terms" className="text-[10px] font-black uppercase text-gray-600 hover:text-green-500 transition-colors">
                             Terms
                         </Link>
-                        <button
-                            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                            className="flex items-center gap-2 text-[10px] font-black uppercase text-green-500 animate-bounce"
-                        >
-                            Return Home <FaArrowUp />
-                        </button>
                     </div>
                 </div>
             </div>

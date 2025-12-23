@@ -2,10 +2,14 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
 import {
-    FaReact, FaNodeJs, FaPython, FaApple, FaGooglePlay, FaCode
+    FaReact, FaNodeJs, FaPython,
+    FaApple, FaGooglePlay, FaCode
 } from 'react-icons/fa';
 import { TbDeviceMobileCode, TbBrandReactNative } from 'react-icons/tb';
-import { SiTypescript, SiSupabase, SiFirebase, SiExpo, SiReact } from 'react-icons/si';
+import {
+    SiTypescript, SiSupabase,
+    SiFirebase, SiExpo, SiReact
+} from 'react-icons/si';
 
 interface SkillItem {
     name: string;

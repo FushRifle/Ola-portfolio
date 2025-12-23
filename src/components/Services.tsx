@@ -3,7 +3,7 @@ import {
     FaBezierCurve, FaLaptopCode, FaMobileAlt,
     FaEthereum, FaCheck, FaArrowRight
 } from 'react-icons/fa';
-import { SiSolidity } from 'react-icons/si';
+import { SiGo, SiSolidity } from 'react-icons/si';
 import { TbDeviceMobileCode, TbBrandReactNative } from 'react-icons/tb';
 
 
@@ -12,7 +12,7 @@ interface ServiceItem {
     title: string;
     description: string;
     features: string[];
-    code: string; // Added for that "Dev" aesthetic
+    code: string;
 }
 
 const services: ServiceItem[] = [
@@ -28,21 +28,21 @@ const services: ServiceItem[] = [
         title: "Scalable Web Systems",
         description: "Building robust frontend architectures with Next.js and TypeScript that share logic seamlessly with mobile counterparts.",
         features: ["SSR & Static Generation", "API Integration", "State Management"],
-        code: "02_WEB"
+        code: "WEB"
     },
     {
         icon: <FaBezierCurve className="text-green-500" />,
-        title: "Mobile-First UI/UX",
-        description: "Engineering design systems in Figma specifically for touch interfaces and mobile user behaviors.",
+        title: "Mobile-First Design",
+        description: "Engineering design systems specifically for touch interfaces and mobile user behaviors.",
         features: ["Design Systems", "Prototyping", "User Journeys"],
-        code: "03_UX"
+        code: "UX"
     },
     {
-        icon: <SiSolidity className="text-green-500" />,
-        title: "Web3 & EVM Integration",
+        icon: <SiGo className="text-green-500" />,
+        title: "Golang",
         description: "Connecting mobile interfaces to decentralized protocols using Ether.js and specialized smart contract logic.",
         features: ["Smart Contract Logic", "Wallet Integration", "DApp UI"],
-        code: "04_WEB3"
+        code: "BACKEND"
     }
 ];
 

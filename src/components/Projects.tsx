@@ -17,21 +17,22 @@ interface Project {
 
 const projects: Project[] = [
     {
-        title: "ParentFully App",
+        title: "ParentFully",
         category: "Mobile",
         description: "A specialized React Native application for parent-child tracking and resource management. Built with an offline-first architecture.",
         images: ["/projects/parent-app-1.png", "/projects/parent-app-2.png"],
-        tech: ["React Native", "Zustand", "Firebase"],
+        tech: ["React Native", "Zustand", "Laravel", "POSTGreSQL"],
         github: "https://github.com/FushRifle",
         testflight: "#",
         drive: "#"
     },
     {
-        title: "Memora Mobile",
+        title: "Memora",
         category: "Mobile",
         description: "AI-powered study tool. Transform notes into flashcards instantly using LLM integration on mobile devices.",
         images: ["/projects/memora-m1.png", "/projects/memora-m2.png"],
-        tech: ["React Native", "OpenAI", "SQLite"],
+        tech: ["React Native", "OpenAI", "GROQAI", "Supabase", "Go"],
+        testflight: "#",
         github: "https://github.com/FushRifle",
         drive: "#"
     },
@@ -42,13 +43,13 @@ const projects: Project[] = [
         images: ["/projects/stackforge1.png", "/projects/stackforge2.png"],
         tech: ["Next.js", "PostgreSQL", "Tailwind"],
         github: "https://github.com/FushRifle",
-        live: "https://stackforge.dev"
+        live: "https://stackforgeai.netlify.app/"
     },
     {
         title: "Parenting & More",
         category: "Website",
         description: "An elegant, content-driven website offering curated parenting resources, expert articles, and practical guides.",
-        images: ["/projects/pam1.png"],
+        images: ["/projects/PAM.png", "/projects/PAM2.png", "/projects/PAM3.png"],
         tech: ["Next.js", "Contentful", "Tailwind"],
         github: "https://github.com/FushRifle",
         live: "https://parentingandmore.vercel.app"
@@ -57,7 +58,7 @@ const projects: Project[] = [
         title: "Whispr",
         category: "Website",
         description: "A real-time messaging engine focused on minimal latency and secure socket connections.",
-        images: ["/projects/whispr.png"],
+        images: ["/projects/whispr1.png", "/projects/whispr2.png"],
         tech: ["Socket.io", "React", "Node.js"],
         github: "https://github.com/FushRifle",
         live: "https://whispr-opal.vercel.app/"

@@ -34,10 +34,9 @@ export default function ScrollToTop() {
                     exit={{ opacity: 0, y: 20 }}
                     transition={{ duration: 0.3 }}
                     onClick={scrollToTop}
-                    className="fixed bottom-8 right-8 z-50 p-4 bg-gradient-to-br from-green-500 to-teal-400 text-white rounded-full shadow-lg hover:shadow-xl transition-all"
-                    aria-label="Scroll to top"
+                    className="fixed bottom-8 right-8 z-50 flex items-center gap-2 text-[11px] font-black uppercase text-green-500 animate-bounce cursor-pointer"
                 >
-                    <FaArrowUp className="text-xl" />
+                    Return Home <FaArrowUp />
                 </motion.button>
             )}
         </AnimatePresence>
