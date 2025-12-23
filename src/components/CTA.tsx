@@ -13,77 +13,114 @@ export default function CTA() {
         }
     };
 
-    const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: { duration: 0.6, ease: "easeOut" }
-        }
-    };
-
     return (
         <section
             id="contact"
-            className="relative py-20 overflow-hidden rounded-3xl border-t border-gray-300/40 mt-15"
+            className="relative py-24 overflow-hidden bg-[#050505] font-mono"
         >
-            {/* Floating elements */}
+            {/* Ambient Background Accents */}
             <motion.div
-                className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl"
-                animate={{ y: [0, -15, 0], x: [0, 10, 0] }}
+                className="absolute top-20 left-10 w-64 h-64 bg-green-500/10 rounded-full blur-[100px]"
+                animate={{ y: [0, -30, 0], opacity: [0.3, 0.6, 0.3] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div
-                className="absolute bottom-20 right-10 w-40 h-40 bg-white/10 rounded-full blur-xl"
-                animate={{ y: [0, 15, 0], x: [0, -10, 0] }}
+                className="absolute bottom-20 right-10 w-80 h-80 bg-green-500/5 rounded-full blur-[120px]"
+                animate={{ y: [0, 30, 0], opacity: [0.2, 0.4, 0.2] }}
                 transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
             />
 
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-7xl mx-auto px-6 lg:pl-32 relative z-10">
                 <motion.div
-                    className="text-center max-w-3xl mx-auto"
+                    className="max-w-4xl"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
                     variants={containerVariants}
                 >
-                    {/* Main CTA heading */}
-                    <motion.div>
-                        <p className="text-white text-lg uppercase tracking-wider mb-2">Get In Touch</p>
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                            Ready to Build Something Amazing?
+                    {/* Header Section */}
+                    <motion.div className="mb-16">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="h-px w-12 bg-green-500" />
+                            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-green-500">Contact_Initiation</span>
+                        </div>
+                        <h2 className="text-5xl lg:text-7xl font-black uppercase tracking-tighter text-white mb-6">
+                            Ready to Build <br /> <span className="text-white/20 italic">Something Amazing?</span>
                         </h2>
-                        <p className="text-xl text-blue-100 mb-10">
-                            Whether you need a full project built, consultation, or just want to chat tech — I'm ready!
+                        <p className="text-lg text-gray-400 max-w-xl leading-relaxed">
+                            Whether you need a high-performance mobile app, a scalable web architecture,
+                            or just want to talk shop—my line is open.
                         </p>
                     </motion.div>
 
-                    {/* Call buttons */}
-                    <motion.div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                    {/* Quick Contact Grid */}
+                    <div className="grid md:grid-cols-2 gap-8 mb-20">
                         <motion.a
                             href="tel:+2348102651145"
-                            className="cta-button-primary shadow-2xl"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center justify-between p-8 bg-white/5 border border-white/10 hover:border-green-500 transition-all group"
+                            whileHover={{ y: -5 }}
                         >
-                            <FaPhoneAlt className="mr-2" />
-                            Call Me
+                            <div className="flex items-center gap-4">
+                                <FaPhoneAlt className="text-green-500 text-xl" />
+                                <span className="text-xs font-black uppercase tracking-widest text-white">+234 810 265 1145</span>
+                            </div>
+                            <span className="text-[10px] text-gray-600 group-hover:text-green-500">CALL</span>
                         </motion.a>
+
                         <motion.a
                             href="mailto:ayomikail21@gmail.com"
-                            className="cta-button-secondary shadow-2xl"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center justify-between p-8 bg-white/5 border border-white/10 hover:border-green-500 transition-all group"
+                            whileHover={{ y: -5 }}
                         >
-                            <FaEnvelope className="mr-2" />
-                            Email Me
+                            <div className="flex items-center gap-4">
+                                <FaEnvelope className="text-green-500 text-xl" />
+                                <span className="text-xs font-black uppercase tracking-widest text-white">ayomikail21@gmail.com</span>
+                            </div>
+                            <span className="text-[10px] text-gray-600 group-hover:text-green-500">EMAIL</span>
                         </motion.a>
-                    </motion.div>
+                    </div>
 
-                    {/* Social links */}
-                    <motion.div className="mb-16">
-                        <p className="text-white text-lg uppercase tracking-wider mb-2">Or connect with me on:</p>
-                        <div className="flex justify-center gap-6">
+                    {/* Glassmorphic Contact Form */}
+                    <motion.div className="bg-[#111] border border-white/5 p-8 md:p-16 shadow-2xl relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-1 bg-green-500" />
+
+                        <div className="mb-12">
+                            <h3 className="text-3xl font-black text-white uppercase tracking-tighter mb-4">Drop a Message</h3>
+                            <p className="text-gray-500 text-sm italic uppercase tracking-widest">
+                                (Cat videos and memes are always welcome.)
+                            </p>
+                        </div>
+
+                        <form className="space-y-6">
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <input
+                                    type="text"
+                                    placeholder="Your Name"
+                                    className="w-full p-4 bg-white/5 border border-white/10 text-white text-sm outline-none focus:border-green-500 transition-colors"
+                                />
+                                <input
+                                    type="email"
+                                    placeholder="Your Email"
+                                    className="w-full p-4 bg-white/5 border border-white/10 text-white text-sm outline-none focus:border-green-500 transition-colors"
+                                />
+                            </div>
+                            <textarea
+                                placeholder="Describe your project vision..."
+                                className="w-full p-4 bg-white/5 border border-white/10 text-white text-sm outline-none focus:border-green-500 transition-colors resize-none"
+                                rows={5}
+                            />
+                            <motion.button
+                                type="submit"
+                                className="w-full py-5 bg-green-500 text-black font-black uppercase tracking-[0.4em] text-xs flex items-center justify-center gap-3 hover:bg-green-400 transition-all"
+                                whileTap={{ scale: 0.98 }}
+                            >
+                                <FaPaperPlane />
+                                EXECUTE_TRANSMISSION
+                            </motion.button>
+                        </form>
+
+                        {/* Social Matrix */}
+                        <div className="mt-16 pt-12 border-t border-white/5 flex flex-wrap justify-center gap-8">
                             {[
                                 { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/abdullahi-olawale-mukaila-24370a183", label: "LinkedIn" },
                                 { icon: <FaGithub />, url: "https://github.com/FushRifle", label: "GitHub" },
@@ -92,54 +129,14 @@ export default function CTA() {
                                 <motion.a
                                     key={index}
                                     href={social.url}
-                                    className="social-icon shadow-4xl"
-                                    aria-label={social.label}
-                                    whileHover={{ y: -5 }}
-                                    whileTap={{ scale: 0.9 }}
+                                    target="_blank"
+                                    className="text-gray-500 hover:text-green-500 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest transition-colors"
+                                    whileHover={{ y: -2 }}
                                 >
-                                    {social.icon}
+                                    {social.icon} {social.label}
                                 </motion.a>
                             ))}
                         </div>
-                    </motion.div>
-
-                    {/* Contact form */}
-                    <motion.div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/20 shadow-3xl">
-                        <p className="text-white text-lg uppercase tracking-wider mb-2">Let's Work Together</p>
-                        <h3 className="text-3xl font-bold text-white mb-4">Contact Me</h3>
-                        <p className="text-lg text-blue-100 mb-6">
-                            I'm currently accepting freelance work, full-time roles, or just fun tech discussions.
-                            <br /> (Cat videos and memes are always welcome too.)
-                        </p>
-                        <form className="max-w-lg mx-auto space-y-4">
-                            <motion.input
-                                type="text"
-                                placeholder="Your Name"
-                                className="w-full p-4 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-                                whileFocus={{ scale: 1.02 }}
-                            />
-                            <motion.input
-                                type="email"
-                                placeholder="Your Email"
-                                className="w-full p-4 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-                                whileFocus={{ scale: 1.02 }}
-                            />
-                            <motion.textarea
-                                placeholder="Your Message (e.g., 'We need your coding superpowers!')"
-                                className="w-full p-4 rounded-lg bg-white/20 placeholder-white/70 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-                                rows={5}
-                                whileFocus={{ scale: 1.02 }}
-                            />
-                            <motion.button
-                                type="submit"
-                                className="w-full flex items-center justify-center gap-2 bg-yellow-400 text-black px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition-all"
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                            >
-                                <FaPaperPlane />
-                                SEND MESSAGE
-                            </motion.button>
-                        </form>
                     </motion.div>
                 </motion.div>
             </div>

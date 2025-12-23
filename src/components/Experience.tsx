@@ -1,4 +1,4 @@
-import { FaLaptopCode, FaTools, FaCogs } from 'react-icons/fa';
+import { FaLaptopCode, FaTools, FaCogs, FaArrowRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 interface ExperienceItem {
@@ -12,116 +12,136 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
     {
-        role: "Front-End Developer",
+        role: "Full-Stack Engineer",
         company: "Voltis Labs",
-        duration: "2025 - Present",
+        duration: "2025 - PRESENT",
         description: [
-            "Developed full-stack web applications for diverse clients",
-            "Managed web hosting including DNS and domain configuration",
-            "Built responsive websites using HTML, CSS, and JavaScript",
-            "Customized WordPress templates to meet client specifications"
+            "Architecting cross-platform mobile solutions and scalable web apps",
+            "Managing cloud infrastructure, DNS, and automated deployment pipelines",
+            "Developing high-performance UIs using TypeScript and modern frameworks",
+            "Translating complex business logic into efficient technical workflows"
         ],
-        icon: <FaLaptopCode className="text-green-500 dark:text-green-400" size={20} />,
-        skills: ["Typescript", "JavaScript", "GraphQL", "DNS Management"]
+        icon: <FaLaptopCode />,
+        skills: ["React Native", "TypeScript", "Next.js", "Cloud Ops"]
     },
     {
         role: "IT Support Specialist",
         company: "Zonus I.C.T Concept Ltd.",
         duration: "2020 - 2021",
         description: [
-            "Diagnosed and repaired hardware issues in computers and peripherals",
-            "Installed and configured operating systems and software",
-            "Provided technical support and system optimization",
-            "Performed data recovery and virus removal"
+            "Engineered hardware solutions and optimized system performance",
+            "Managed OS deployment and secure software configurations",
+            "Executed critical data recovery and virus mitigation protocols",
+            "Provided tier-3 technical troubleshooting for enterprise systems"
         ],
-        icon: <FaTools className="text-yellow-500 dark:text-yellow-400" size={20} />,
-        skills: ["Hardware Repair", "System Admin", "Tech Support", "Data Recovery"]
+        icon: <FaTools />,
+        skills: ["Systems Admin", "Hardware Ops", "Security", "Recovery"]
     },
     {
         role: "Junior CRM Developer",
         company: "MCEE Business Solutions",
         duration: "2018 - 2019",
         description: [
-            "Developed and customized applications within Odoo ERP system",
-            "Implemented CRM features to meet business requirements",
-            "Maintained and updated existing Odoo modules",
-            "Collaborated with team on system integrations"
+            "Customized Odoo ERP modules to streamline business operations",
+            "Developed Python-based logic for CRM automation and reporting",
+            "Maintained integrity of existing enterprise resource modules",
+            "Collaborated on system integrations and database migrations"
         ],
-        icon: <FaCogs className="text-purple-500 dark:text-purple-400" size={20} />,
-        skills: ["Odoo Framework", "Python", "ERP Systems", "CRM Development"]
+        icon: <FaCogs />,
+        skills: ["Python", "Odoo ERP", "CRM Logic", "Database"]
     }
 ];
 
 export default function Experience() {
     return (
-        <section id="experience" className="py-12 md:py-16 bg-gray-50 dark:bg-gray-900">
-            {/* Section Header */}
-            <div className="text-center mb-16">
-                <motion.p
-                    className="text-black dark:text-white text-lg uppercase tracking-wider mb-2"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                >
-                    My Experiences
-                </motion.p>
-                <motion.h2
-                    className="text-4xl font-bold text-gray-800 dark:text-white"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 }}
-                >
-                    My Expertise Skills
-                </motion.h2>
-            </div>
+        <section id="experience" className="relative py-24 bg-[#050505] font-mono overflow-hidden">
+            {/* Structural Accents */}
+            <div className="absolute left-0 top-0 w-px h-full bg-white/5 lg:left-32" />
 
-            {/* Timeline */}
-            <div className="relative max-w-4xl mx-auto px-4">
-                {/* Vertical timeline line */}
-                <div className="absolute top-0 left-4 md:left-1/2 w-1 bg-gradient-to-b from-green-500 to-teal-500 h-full transform md:-translate-x-1/2"></div>
+            <div className="max-w-7xl mx-auto px-6 lg:pl-32">
 
-                {experiences.map((exp, index) => (
-                    <div
-                        key={index}
-                        className={`mb-12 flex flex-col md:flex-row ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`}
+                {/* Header Section */}
+                <div className="mb-20">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        className="flex items-center gap-4 mb-4"
                     >
-                        {/* Timeline dot */}
-                        <div className="relative z-10 flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-white border-4 border-green-500 dark:border-green-400 shadow-md mx-auto md:mx-0 md:absolute left-4 md:left-1/2 transform md:-translate-x-1/2 mb-4 md:mb-0">
-                            {exp.icon}
-                        </div>
+                        <div className="h-px w-12 bg-green-500" />
+                        <span className="text-[10px] font-black uppercase tracking-[0.4em] text-green-500">Professional_History</span>
+                    </motion.div>
+                    <motion.h2
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="text-5xl lg:text-7xl font-black uppercase tracking-tighter text-white"
+                    >
+                        Experience <span className="text-white/20">Log</span>
+                    </motion.h2>
+                </div>
 
-                        {/* Content card */}
-                        <div className={`bg-gradient-to-r from-green-600 to-teal-500 text-white p-5 sm:p-6 rounded-lg shadow-lg w-full md:w-5/12 ${index % 2 === 0 ? "md:ml-auto md:mr-4" : "md:mr-auto md:ml-4"
-                            }`}>
-                            <h3 className="text-lg sm:text-xl font-semibold mb-1">{exp.role}</h3>
-                            <p className="text-gray-200 mb-3 text-sm sm:text-base">
-                                {exp.company} · <span className="text-gray-300">{exp.duration}</span>
-                            </p>
-
-                            <ul className="mb-4 space-y-2 ">
-                                {exp.description.map((item, i) => (
-                                    <li key={i} className="flex items-start text-xs sm:text-sm text-white text-lg uppercase tracking-wider mb-2">
-                                        <span className="text-yellow-300 mr-2">•</span>
-                                        <span>{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <div className="flex flex-wrap gap-2">
-                                {exp.skills.map((skill, i) => (
-                                    <span
-                                        key={i}
-                                        className="bg-white/20 text-white text-lg uppercase tracking-wider mb-2 text-xs sm:text-sm px-2 py-1 rounded-full"
-                                    >
-                                        {skill}
-                                    </span>
-                                ))}
+                {/* Experience List */}
+                <div className="space-y-12">
+                    {experiences.map((exp, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            className="group relative grid lg:grid-cols-12 gap-8 py-8 border-b border-white/5 hover:bg-white/[0.02] transition-all"
+                        >
+                            {/* Duration & Icon */}
+                            <div className="lg:col-span-3">
+                                <p className="text-xs font-black text-gray-500 mb-2">{exp.duration}</p>
+                                <div className="inline-flex items-center gap-3 text-green-500">
+                                    <span className="text-xl">{exp.icon}</span>
+                                    <div className="h-px w-8 bg-green-500/30" />
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                ))}
+
+                            {/* Core Content */}
+                            <div className="lg:col-span-6">
+                                <h3 className="text-2xl font-black uppercase tracking-tight text-white mb-1">
+                                    {exp.role}
+                                </h3>
+                                <p className="text-green-500 text-sm font-bold mb-6 tracking-widest uppercase">
+                                    @ {exp.company}
+                                </p>
+
+                                <ul className="space-y-4">
+                                    {exp.description.map((item, i) => (
+                                        <li key={i} className="flex items-start gap-3 text-gray-400 text-sm leading-relaxed">
+                                            <FaArrowRight className="mt-1.5 text-[10px] text-green-500 flex-shrink-0" />
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            {/* Skill Tags */}
+                            <div className="lg:col-span-3">
+                                <div className="flex flex-wrap gap-2">
+                                    {exp.skills.map((skill, i) => (
+                                        <span
+                                            key={i}
+                                            className="px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-black uppercase tracking-widest text-gray-300 group-hover:border-green-500/50 transition-colors"
+                                        >
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+
+                {/* Technical Footer Decoration */}
+                <div className="mt-20 flex justify-between items-center opacity-20">
+                    <div className="text-[10px] font-bold tracking-[0.5em] uppercase">System.Status: Active</div>
+                    <div className="h-px flex-1 mx-8 bg-white/20" />
+                    <div className="text-[10px] font-bold tracking-[0.5em] uppercase">Olawale_Dev_Terminal</div>
+                </div>
             </div>
         </section>
     );

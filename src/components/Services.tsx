@@ -1,151 +1,131 @@
 import { motion } from 'framer-motion';
-import { FaBezierCurve, FaLaptopCode, FaMobileAlt, FaEthereum, FaCheck } from 'react-icons/fa';
+import {
+    FaBezierCurve, FaLaptopCode, FaMobileAlt,
+    FaEthereum, FaCheck, FaArrowRight
+} from 'react-icons/fa';
+import { SiSolidity } from 'react-icons/si';
+import { TbDeviceMobileCode, TbBrandReactNative } from 'react-icons/tb';
+
 
 interface ServiceItem {
     icon: React.ReactElement;
     title: string;
     description: string;
     features: string[];
-    delay: number;
+    code: string; // Added for that "Dev" aesthetic
 }
 
 const services: ServiceItem[] = [
     {
-        icon: <FaBezierCurve className="text-teal-400" size={48} />,
-        title: "Creative Design",
-        description: "Combining artistic elements and innovative thinking to produce visually appealing and impactful designs.",
-        features: ["UI/UX Design", "Figma", "Mobile App UI/UX"],
-        delay: 0.1
+        icon: <TbBrandReactNative className="text-green-500" />,
+        title: "Cross-Platform Mobile",
+        description: "Specialized React Native development for high-performance iOS and Android applications with native-level smoothness.",
+        features: ["Custom Native Modules", "Reanimated 3 UI", "Performance Tuning"],
+        code: "01_MOBILE"
     },
     {
-        icon: <FaLaptopCode className="text-blue-400" size={48} />,
-        title: "Web Development",
-        description: "Combining both Front-End and Back-End development to deliver a stunning, interactive and appealing website.",
-        features: ["Vue.js", "Angular.js", "Fullstack"],
-        delay: 0.3
+        icon: <FaLaptopCode className="text-green-500" />,
+        title: "Scalable Web Systems",
+        description: "Building robust frontend architectures with Next.js and TypeScript that share logic seamlessly with mobile counterparts.",
+        features: ["SSR & Static Generation", "API Integration", "State Management"],
+        code: "02_WEB"
     },
     {
-        icon: <FaMobileAlt className="text-purple-400" size={48} />,
-        title: "Mobile Application Development",
-        description: "Developing software applications for mobile platforms, such as smartphones, tablets, or digital assistants.",
-        features: ["UI/UX Design", "Postgre Database", "Mobile App"],
-        delay: 0.5
+        icon: <FaBezierCurve className="text-green-500" />,
+        title: "Mobile-First UI/UX",
+        description: "Engineering design systems in Figma specifically for touch interfaces and mobile user behaviors.",
+        features: ["Design Systems", "Prototyping", "User Journeys"],
+        code: "03_UX"
     },
     {
-        icon: <FaEthereum className="text-indigo-400" size={48} />,
-        title: "Smart Contract (EVM) Project",
-        description: "Smart contracts in high-level languages (like Solidity), which are compiled into EVM bytecode.",
-        features: ["UI/UX Design", "Ether.js", "Mobile App Dev."],
-        delay: 0.7
+        icon: <SiSolidity className="text-green-500" />,
+        title: "Web3 & EVM Integration",
+        description: "Connecting mobile interfaces to decentralized protocols using Ether.js and specialized smart contract logic.",
+        features: ["Smart Contract Logic", "Wallet Integration", "DApp UI"],
+        code: "04_WEB3"
     }
 ];
 
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.2
-        }
-    }
-};
-
-const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            duration: 0.5,
-            ease: "easeOut"
-        }
-    }
-};
-
 export default function Services() {
     return (
-        <section id="services" className="py-16 bg-gray-50 dark:bg-gray-900">
+        <section id="services" className="relative py-24 bg-[#0a0a0a] font-mono overflow-hidden">
+            {/* Background Grid */}
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
+                style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-            {/* Section Header */}
-            <div className="text-center mb-16">
-                <motion.p
-                    className="text-black dark:text-white text-lg uppercase tracking-wider mb-2"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                >
-                    My Services
-                </motion.p>
-                <motion.h2
-                    className="text-4xl font-bold text-gray-800 dark:text-white"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 }}
-                >
-                    What I can do for you
-                </motion.h2>
-            </div>
+            <div className="max-w-7xl mx-auto px-6 lg:pl-32">
 
-            <div className="flex flex-col lg:flex-row rounded-xl overflow-hidden shadow-lg">
-                {/* Left Header Section */}
-                <div className="lg:w-1/4 bg-gradient-to-br from-green-500 to-teal-400 p-8 lg:p-12 flex flex-col justify-center">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                    </motion.div>
+                {/* Header Block */}
+                <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div className="border-l-4 border-green-500 pl-8">
+                        <motion.span
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-500"
+                        >
+                            Solutions_Manifest
+                        </motion.span>
+                        <h2 className="text-5xl lg:text-7xl font-black uppercase tracking-tighter text-white mt-2">
+                            Capabilities <span className="text-green-500">_</span>
+                        </h2>
+                    </div>
+                    <p className="text-gray-500 text-xs uppercase tracking-widest leading-loose max-w-xs text-right hidden lg:block">
+                        Engineered for performance. <br /> Built for scalability. <br /> Delivered with precision.
+                    </p>
                 </div>
 
-                {/* Right Content Section */}
-                <div className="lg:w-3/4 bg-white dark:bg-gray-800 p-8 lg:p-12">
-                    <motion.div
-                        className="space-y-6"
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: "-100px" }}
-                    >
-                        {services.map((service, index) => (
-                            <motion.div
-                                key={index}
-                                className="service-item bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md hover:shadow-lg transition-all"
-                                custom={service.delay}
-                                whileHover={{ y: -5 }}
+                {/* Services Matrix */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10">
+                    {services.map((service, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ delay: index * 0.1 }}
+                            className="bg-[#0a0a0a] p-10 group hover:bg-[#111] transition-all relative overflow-hidden"
+                        >
+                            {/* Technical Index */}
+                            <span className="absolute top-10 right-10 text-[10px] text-white/10 font-black group-hover:text-green-500/20 transition-colors">
+                                {service.code}
+                            </span>
+
+                            <div className="text-4xl mb-8 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500">
+                                {service.icon}
+                            </div>
+
+                            <h3 className="text-2xl font-black uppercase tracking-tight text-white mb-4">
+                                {service.title}
+                            </h3>
+
+                            <p className="text-gray-500 text-sm leading-relaxed mb-8 min-h-[60px]">
+                                {service.description}
+                            </p>
+
+                            <ul className="space-y-3 mb-10">
+                                {service.features.map((feature, i) => (
+                                    <li key={i} className="flex items-center gap-3">
+                                        <div className="h-1 w-1 bg-green-500" />
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">
+                                            {feature}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <motion.button
+                                whileHover={{ x: 5 }}
+                                className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-green-500"
                             >
-                                <div className="flex flex-col md:flex-row gap-6 items-center">
-                                    {/* Icon */}
-                                    <div className="flex-shrink-0">
-                                        {service.icon}
-                                    </div>
+                                Technical Details <FaArrowRight />
+                            </motion.button>
+                        </motion.div>
+                    ))}
+                </div>
 
-                                    {/* Content */}
-                                    <div className="flex-1">
-                                        <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
-                                            {service.title}
-                                        </h3>
-                                        <p className="text-gray-600 dark:text-gray-300 mb-4">
-                                            {service.description}
-                                        </p>
-                                    </div>
-
-                                    {/* Features */}
-                                    <div className="w-full md:w-1/4">
-                                        <ul className="space-y-2">
-                                            {service.features.map((feature, i) => (
-                                                <li key={i} className="flex items-start">
-                                                    <FaCheck className="text-teal-400 mr-2 mt-1 flex-shrink-0" />
-                                                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                {/* Data decoration */}
+                <div className="mt-12 flex items-center justify-between text-[8px] text-white/20 font-black uppercase tracking-[1em]">
+                    <span>Process: Design / Code / Deploy</span>
+                    <span className="hidden sm:block">04 / Services / 2025</span>
                 </div>
             </div>
         </section>
