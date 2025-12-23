@@ -31,9 +31,9 @@ export default function Footer() {
     ];
 
     const contactInfo = [
-        { icon: <FaMapMarkerAlt />, text: "Yola, Nigeria", label: "LOC" },
+        { icon: <FaMapMarkerAlt />, text: "Abuja, Nigeria", label: "LOC" },
         { icon: <FaEnvelope />, text: "ayomikail21@gmail.com", label: "MAIL" },
-        { icon: <FaPhoneAlt />, text: "+234 8102 651 145", label: "TEL" },
+        { icon: <FaPhoneAlt />, text: "+234 7016 223 419", label: "TEL" },
         { icon: <FaClock />, text: "GMT+1 // 09:00 - 17:00", label: "UTC" }
     ];
 

@@ -42,27 +42,27 @@ export default function CTA() {
                     <motion.div className="mb-16">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="h-px w-12 bg-green-500" />
-                            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-green-500">Contact_Initiation</span>
+                            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-green-500">Contact Information</span>
                         </div>
                         <h2 className="text-5xl lg:text-7xl font-black uppercase tracking-tighter text-white mb-6">
                             Ready to Build <br /> <span className="text-white/20 italic">Something Amazing?</span>
                         </h2>
                         <p className="text-lg text-gray-400 max-w-xl leading-relaxed">
-                            Whether you need a high-performance mobile app, a scalable web architecture,
-                            or just want to talk shop—my line is open.
+                            Whether you need a high-performance mobile app, a scalable web architecture, just want to talk ?
+                            my line is open.
                         </p>
                     </motion.div>
 
                     {/* Quick Contact Grid */}
                     <div className="grid md:grid-cols-2 gap-8 mb-20">
                         <motion.a
-                            href="tel:+2348102651145"
+                            href="tel:+2347016223419"
                             className="flex items-center justify-between p-8 bg-white/5 border border-white/10 hover:border-green-500 transition-all group"
                             whileHover={{ y: -5 }}
                         >
                             <div className="flex items-center gap-4">
                                 <FaPhoneAlt className="text-green-500 text-xl" />
-                                <span className="text-xs font-black uppercase tracking-widest text-white">+234 810 265 1145</span>
+                                <span className="text-xs font-black uppercase tracking-widest text-white">+234 701 622 3419</span>
                             </div>
                             <span className="text-[10px] text-gray-600 group-hover:text-green-500">CALL</span>
                         </motion.a>
@@ -115,7 +115,7 @@ export default function CTA() {
                                 whileTap={{ scale: 0.98 }}
                             >
                                 <FaPaperPlane />
-                                EXECUTE_TRANSMISSION
+                                REACH OUT
                             </motion.button>
                         </form>
 

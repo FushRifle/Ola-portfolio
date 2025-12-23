@@ -48,7 +48,8 @@ const services: ServiceItem[] = [
 
 export default function Services() {
     return (
-        <section id="services" className="relative py-24 bg-[#0a0a0a] font-mono overflow-hidden">
+        <section id="services" className="relative py-24 bg-[#0a0a0a] 
+        font-mono overflow-hidden">
             {/* Background Grid */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '60px 60px' }} />

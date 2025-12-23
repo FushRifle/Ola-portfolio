@@ -1,6 +1,5 @@
 'use client';
 
-import Header from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Skills from '@/components/Skills';
 import Services from "@/components/Services";
@@ -15,7 +14,7 @@ import ScrollToTop from "@/components/Scroll";
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-gray-900">
+        <div className="min-h-screen">
             <Hero />
             <div className="max-w-[87rem] mx-auto justify-center">
                 <Skills />

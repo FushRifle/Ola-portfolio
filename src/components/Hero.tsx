@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fa';
 import Typed from 'typed.js';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaEnvelope, FaWhatsapp } from 'react-icons/fa6';
+import { FaEnvelope, FaMobileScreen, FaPhoneFlip, FaWhatsapp } from 'react-icons/fa6';
 
 export default function Hero() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -45,8 +45,9 @@ export default function Hero() {
                 <title>Olawale | Mobile Engineer</title>
             </Head>
 
-            <section id="home" className="relative w-full min-h-screen bg-[#0a0a0a] text-white font-mono overflow-hidden">
-
+            <section id="about"
+                className="relative w-full min-h-screen bg-[#0a0a0a] text-white font-mono overflow-hidden"
+            >
                 {/* Background Pattern: Technical Grid */}
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                     style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
@@ -134,7 +135,8 @@ export default function Hero() {
 
                             <motion.div variants={blockVariants as any} className="flex flex-wrap gap-4">
                                 <button className="px-8 py-4 bg-white text-black font-black uppercase text-sm flex items-center gap-4 hover:bg-green-500 transition-colors group cursor-pointer">
-                                    Start Project <FaArrowRight />
+                                    Start Project
+                                    <FaArrowRight />
                                 </button>
                                 <button className="px-8 py-4 border-2 border-white/20 font-black uppercase text-sm flex items-center gap-4 hover:border-green-500 hover:text-green-500 transition-all cursor-pointer">
                                     <FaDownload /> Download Resume
@@ -145,21 +147,57 @@ export default function Hero() {
                                 <div className="flex flex-col gap-1">
                                     <span className="text-[10px] text-gray-600 uppercase font-black tracking-widest">Stack</span>
                                     <div className="flex gap-4 text-gray-400 text-lg">
-                                        <FaCode title="Typescript" /> <FaLayerGroup title="Redux/Zustand" /> <FaBolt title="Performance" />
+                                        <FaCode title="Typescript" />
+                                        <FaLayerGroup title="Redux/Zustand" />
+                                        <FaBolt title="Performance" />
                                     </div>
                                 </div>
                                 <div className="flex flex-col gap-1">
                                     <span className="text-[10px] text-gray-600 uppercase font-black tracking-widest">Connect</span>
                                     <div className="flex gap-4 text-gray-400">
-                                        <a href="#" className="hover:text-green-500"><FaGithub /></a>
-                                        <a href="#" className="hover:text-green-500"><FaLinkedinIn /></a>
-                                        <a href="#" className="hover:text-green-500">
+                                        <a
+                                            href="tel:+2347016223419"
+                                            className="hover:text-green-500">
+                                            <FaMobileScreen />
+                                        </a>
+                                        <a
+                                            href="https://github.com/FushRifle"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="hover:text-green-500">
+                                            <FaGithub />
+                                        </a>
+
+                                        <a
+                                            href="https://linkedin.com/in/abdullahi-olawale-mukaila-24370a183"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="hover:text-green-500">
+                                            <FaLinkedinIn />
+                                        </a>
+
+                                        <a
+                                            href="mailto:ayomikail21@gmail.com"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="hover:text-green-500">
                                             <FaEnvelope />
                                         </a>
-                                        <a href="#" className="hover:text-green-500">
+
+                                        <a
+                                            href="https://twitter.com/FushRifle"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="hover:text-green-500">
                                             <FaTwitter />
                                         </a>
-                                        <a href="#" className="hover:text-green-500">
+
+                                        <a
+                                            href="https://wa.me/2347016223419"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="hover:text-green-500"
+                                        >
                                             <FaWhatsapp />
                                         </a>
                                     </div>
@@ -172,7 +210,8 @@ export default function Hero() {
                             initial={{ opacity: 0, x: 100 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="relative flex-1 w-full flex justify-center lg:justify-end"
+                            className="relative flex-1 w-full flex justify-center 
+                            lg:justify-end"
                         >
                             <div className="relative w-full max-w-[550px] aspect-square">
                                 <div className="absolute inset-0 border-2 border-white/10 translate-x-4 translate-y-4" />
