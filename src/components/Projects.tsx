@@ -20,7 +20,7 @@ const projects: Project[] = [
         title: "ParentFully",
         category: "Mobile",
         description: "A specialized React Native application for parent-child tracking and resource management. Built with an offline-first architecture.",
-        images: ["/projects/parentfully.png", "/projects/parent-app-2.png"],
+        images: ["/projects/parentfully.png", "/projects/parentfully2.png"],
         tech: ["React Native", "Zustand", "Laravel", "POSTGreSQL"],
         github: "https://github.com/FushRifle",
         testflight: "#",
@@ -33,8 +33,27 @@ const projects: Project[] = [
         images: ["/projects/memora4.png", "/projects/memora5.png", "/projects/memora6.png"],
         tech: ["React Native", "OpenAI", "GROQAI", "Supabase", "Go", "Next.js", "Prisma"],
         testflight: "#",
-        github: "https://github.com/FushRifle",
+        github: "https://github.com/FushRifle/Memora_expo",
         drive: "#"
+    },
+    {
+        title: "Parenting Systems Resources",
+        category: "Website",
+        description: "Parenting with clarity raising well-rounded capable global children without losing core African values.",
+        images: ["/projects/system3.png", "/projects/system2.png", "/projects/system.png"],
+        tech: ["RadixUI", "Typescript", "Tailwind", "Framer-Motion"],
+        github: "https://github.com/FushRifle/clarity-parenting-systems",
+        live: "https://parentingsystems.vercel.app/"
+    },
+
+    {
+        title: "ParentFully Admin Dashboard",
+        category: "Website",
+        description: "Admin Dashboard for ParentFully mobile app",
+        images: ["/projects/dashboard.png", "/projects/dashboard2.png", "/projects/dashboard3.png"],
+        tech: ["RadixUI", "Next.js", "Typescript", "Tailwind", "Framer-Motion"],
+        github: "https://github.com/FushRifle/ParentFully-dashboard",
+        live: "https://parentfullydashboard.vercel.app/"
     },
     {
         title: "StackForge",
