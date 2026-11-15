@@ -6,18 +6,16 @@ import {
     FaArrowRight, FaCode, FaLayerGroup, FaBolt
 } from 'react-icons/fa';
 import Typed from 'typed.js';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaEnvelope, FaMobileScreen, FaPhoneFlip, FaWhatsapp } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
+import { FaEnvelope, FaMobileScreen, FaWhatsapp } from 'react-icons/fa6';
 
 export default function Hero() {
-    const [menuOpen, setMenuOpen] = useState(false);
-
     useEffect(() => {
         const typed = new Typed('.typing', {
             strings: [
                 'React Native Specialist',
-                'Mobile Performance Lead',
-                'Fullstack Architect'
+                'Mobile App Developer',
+                'Cross-Platform Developer'
             ],
             typeSpeed: 50,
             backSpeed: 30,
@@ -72,9 +70,6 @@ export default function Hero() {
                                 <h2 className="text-2xl font-black tracking-tighter text-white uppercase italic">
                                     OLA<span className="text-green-500">WALE</span>
                                     <span className="text-green-500 text-xl">.</span>
-                                    <span className="w-fit text-[10px] font-black bg-white text-black px-2 py-0.5 tracking-[0.2em] transform group-hover:bg-green-500 transition-colors duration-300">
-                                        DEV
-                                    </span>
                                 </h2>
                             </div>
                         </ScrollLink>
@@ -128,8 +123,8 @@ export default function Hero() {
                                     <span className="typing text-xl text-gray-400"></span>
                                 </div>
                                 <p className="text-gray-500 max-w-md text-sm leading-relaxed mt-4">
-                                    I build mission-critical mobile applications using <span className="text-white">React Native</span>.
-                                    Focused on performance, scalability, and efficiency.
+                                    I build thoughtful, reliable mobile applications with <span className="text-white">React Native</span>.
+                                    Focused on smooth experiences, maintainable code, and real user needs.
                                 </p>
                             </motion.div>
 
@@ -138,9 +133,13 @@ export default function Hero() {
                                     Start Project
                                     <FaArrowRight />
                                 </button>
-                                <button className="px-8 py-4 border-2 border-white/20 font-black uppercase text-sm flex items-center gap-4 hover:border-green-500 hover:text-green-500 transition-all cursor-pointer">
+                                <a
+                                    href="/docs/Abdullahi_Olawale_Mukaila_ATS_Resume.pdf"
+                                    download
+                                    className="px-8 py-4 border-2 border-white/20 font-black uppercase text-sm flex items-center gap-4 hover:border-green-500 hover:text-green-500 transition-all"
+                                >
                                     <FaDownload /> Download Resume
-                                </button>
+                                </a>
                             </motion.div>
 
                             <motion.div variants={blockVariants as any} className="mt-16 flex gap-10">
@@ -219,7 +218,7 @@ export default function Hero() {
 
                                 <div className="relative w-full h-full bg-zinc-900 border-2 border-white overflow-hidden group">
                                     <img
-                                        src="/images/ola.jpg"
+                                        src="/images/ola.png"
                                         alt="Olawale"
                                         className="w-full h-full object-cover grayscale brightness-75 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500"
                                     />
@@ -234,13 +233,14 @@ export default function Hero() {
                                         <div className="flex justify-between items-center">
                                             <div>
                                                 <p className="text-[13px] font-black uppercase tracking-tighter leading-none mb-1">
+                                                    Olawale Abdullahi
+                                                </p>
+                                                <p className="text-xl font-black uppercase tracking-tighter">
                                                     Mukaila
                                                 </p>
-                                                <p className="text-xl font-black uppercase tracking-tighter">Abdullahi Olawale</p>
                                             </div>
                                             <div className="text-right">
-                                                <p className="text-[10px] font-black uppercase tracking-tighter leading-none mb-1">Status</p>
-                                                <p className="text-sm font-black text-green-600">ACTIVE</p>
+                                                <p className="text-sm font-black text-green-600">Available for Freelancing</p>
                                             </div>
                                         </div>
                                     </div>

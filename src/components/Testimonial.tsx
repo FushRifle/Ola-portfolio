@@ -120,8 +120,7 @@ export default function Testimonials() {
                             </motion.div>
                         </AnimatePresence>
 
-                        {/* Navigation Terminal */}
-                        <div className="flex mt-16 gap-px bg-white/10 w-fit">
+                        <div className="mt-16 flex w-fit gap-px rounded-lg bg-white/10">
                             <button
                                 onClick={prev}
                                 className="p-6 bg-white/5 hover:bg-green-500 hover:text-black transition-all text-white border-r border-white/10"
@@ -138,11 +137,6 @@ export default function Testimonials() {
                     </div>
                 </div>
 
-                {/* Technical Footer */}
-                <div className="mt-12 flex justify-between items-center text-[8px] font-black text-white/20 uppercase tracking-[1em]">
-                    <span>Social_Trust_Protocol</span>
-                    <span className="hidden md:block">Active_Review_Loop</span>
-                </div>
             </div>
         </section>
     );

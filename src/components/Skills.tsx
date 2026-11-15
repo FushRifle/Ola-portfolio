@@ -109,11 +109,11 @@ export default function Skills() {
                                 Core Competencies
                             </span>
                             <h2 className="text-5xl font-black uppercase tracking-tighter mt-6 mb-8 leading-none">
-                                Technical <br /> <span className="text-green-500">Arsenal</span>
+                                Mobile <br /> <span className="text-green-500">Expertise</span>
                             </h2>
                             <p className="text-gray-500 text-sm leading-relaxed max-w-sm mb-10">
-                                Specialized in cross-platform mobile development with a heavy focus on performance,
-                                native bridge integration, and highly interactive user interfaces.
+                                Focused on cross-platform mobile development, responsive interfaces,
+                                and dependable app experiences.
                             </p>
 
                             {/* Decorative detail */}
@@ -122,8 +122,8 @@ export default function Skills() {
                                     <FaCode className="text-gray-600 group-hover:text-green-500" />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-black text-white uppercase tracking-widest">Architecture</p>
-                                    <p className="text-xs text-gray-500">Atomic Design • Clean Architecture</p>
+                                    <p className="text-[10px] font-black text-white uppercase tracking-widest">App development</p>
+                                    <p className="text-xs text-gray-500">React Native • TypeScript • Expo</p>
                                 </div>
                             </div>
                         </motion.div>

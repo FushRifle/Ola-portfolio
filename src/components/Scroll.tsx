@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 
 export default function ScrollToTop() {
     const [isVisible, setIsVisible] = useState(false);
@@ -28,16 +29,18 @@ export default function ScrollToTop() {
     return (
         <AnimatePresence>
             {isVisible && (
-                <motion.button
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
                     transition={{ duration: 0.3 }}
                     onClick={scrollToTop}
-                    className="fixed bottom-8 right-8 z-50 flex items-center gap-2 text-[11px] font-black uppercase text-green-500 animate-bounce cursor-pointer"
+                    className="fixed bottom-8 right-8 z-50 animate-bounce"
                 >
-                    Return Home <FaArrowUp />
-                </motion.button>
+                    <Button onClick={scrollToTop} variant="ghost" className="gap-2 text-[11px] font-black uppercase text-green-500">
+                        Return Home <FaArrowUp />
+                    </Button>
+                </motion.div>
             )}
         </AnimatePresence>
     );

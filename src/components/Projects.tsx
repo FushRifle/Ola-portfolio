@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight, FaGoogleDrive, FaTimes, FaExpand } from 'react-icons/fa';
 import { TbBrandApple } from 'react-icons/tb';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
 interface Project {
     title: string;
@@ -16,6 +19,19 @@ interface Project {
 }
 
 const projects: Project[] = [
+    {
+        title: "Clique",
+        category: "Mobile",
+        description: "A polished mobile experience designed to help people connect, share, and stay in the loop with their community.",
+        images: [
+            "/projects/clique-1.png",
+            "/projects/clique-2.png",
+            "/projects/clique-3.png",
+            "/projects/clique-4.png",
+        ],
+        tech: ["React Native", "TypeScript", "Mobile UI"],
+        github: "https://github.com/FushRifle",
+    },
     {
         title: "ParentFully",
         category: "Mobile",
@@ -101,7 +117,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
     return (
         <>
-            <div className="bg-[#0c0c0c] border border-white/5 group hover:border-green-500/20 transition-all duration-700 overflow-hidden">
+            <Card className="group overflow-hidden rounded-none border-white/5 bg-[#0c0c0c] text-white transition-all duration-700 hover:border-green-500/20">
                 <div className="grid lg:grid-cols-2">
 
                     {/* DEVICE DISPLAY SECTION */}
@@ -157,29 +173,31 @@ const ProjectCard = ({ project }: { project: Project }) => {
                             {/* Universal Chevrons */}
                             {project.images.length > 1 && (
                                 <>
-                                    <button
+                                    <Button
                                         onClick={prev}
-                                        className="absolute -left-12 lg:-left-16 top-1/2 -translate-y-1/2 p-2 text-white/20 hover:text-green-500 transition-all hover:scale-110 active:scale-95 z-30"
+                                        variant="ghost"
+                                        size="icon"
+                                        className="absolute -left-12 top-1/2 z-30 -translate-y-1/2 text-white/20 hover:scale-110 hover:text-green-500 lg:-left-16"
                                     >
                                         <FaChevronLeft size={24} />
-                                    </button>
-                                    <button
+                                    </Button>
+                                    <Button
                                         onClick={next}
-                                        className="absolute -right-12 lg:-right-16 top-1/2 -translate-y-1/2 p-2 text-white/20 hover:text-green-500 transition-all hover:scale-110 active:scale-95 z-30"
+                                        variant="ghost"
+                                        size="icon"
+                                        className="absolute -right-12 top-1/2 z-30 -translate-y-1/2 text-white/20 hover:scale-110 hover:text-green-500 lg:-right-16"
                                     >
                                         <FaChevronRight size={24} />
-                                    </button>
+                                    </Button>
                                 </>
                             )}
                         </div>
                     </div>
 
                     {/* CONTENT SECTION (Kept mostly same, but added subtle glassmorphism) */}
-                    <div className="p-8 lg:p-16 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/5 bg-gradient-to-br from-transparent to-white/[0.02]">
+                    <CardContent className="flex flex-col justify-center border-t border-white/5 bg-gradient-to-br from-transparent to-white/[0.02] p-8 lg:border-t-0 lg:border-l lg:p-16">
                         <div className="inline-flex items-center gap-2 mb-8">
-                            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-green-500 bg-green-500/10 px-3 py-1">
-                                {project.category}
-                            </span>
+                            <Badge className="bg-green-500/10 text-[10px] font-black uppercase tracking-[0.3em] text-green-500 hover:bg-green-500/10">{project.category}</Badge>
                         </div>
 
                         <h3 className="text-4xl lg:text-5xl font-black text-white uppercase tracking-tighter mb-6 group-hover:translate-x-2 transition-transform duration-500">
@@ -192,9 +210,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
                         <div className="flex flex-wrap gap-2 mb-12">
                             {project.tech.map((t) => (
-                                <span key={t} className="text-[10px] text-gray-400 border border-white/10 px-3 py-1 uppercase font-bold tracking-[0.2em] bg-white/5">
-                                    {t}
-                                </span>
+                                <Badge key={t} variant="outline" className="border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">{t}</Badge>
                             ))}
                         </div>
 
@@ -208,9 +224,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
                                 </a>
                             )}
                         </div>
-                    </div>
+                    </CardContent>
                 </div>
-            </div>
+            </Card>
 
             {/* FULLSCREEN MODAL */}
             <AnimatePresence>

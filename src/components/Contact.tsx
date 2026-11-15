@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { FaPaperPlane, FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 
 export default function Contact() {
@@ -28,11 +27,11 @@ export default function Contact() {
                     {/* Left: Contact Info & Socials */}
                     <div className="lg:col-span-5 space-y-12">
                         <div>
-                            <h3 className="text-xl font-black uppercase text-white mb-6">Transmission Hub</h3>
+                            <h3 className="text-xl font-black uppercase text-white mb-6">Let&apos;s connect</h3>
                             <p className="text-gray-500 text-sm leading-relaxed mb-8 max-w-sm">
-                                Open for **Mobile Architecture** consultation, **Full-Stack** roles, or discussing why **React Native** is superior to Flutter.
+                                Available for mobile app development, React Native consulting, and product collaborations.
                                 <br /><br />
-                                Response latency: {"<"} 24 hours.
+                                I usually respond within 24 hours.
                             </p>
 
                             <div className="space-y-4">
@@ -73,25 +72,25 @@ export default function Contact() {
                         <form className="space-y-px bg-white/10 border border-white/10 shadow-[20px_20px_0px_0px_rgba(34,197,94,0.05)]">
                             <div className="grid md:grid-cols-2">
                                 <div className="p-6 bg-[#0a0a0a] border-r border-b border-white/10 focus-within:bg-[#111] transition-colors">
-                                    <label className="block text-[8px] font-black text-green-500 uppercase tracking-widest mb-2">Input_User_Name</label>
+                                    <label className="block text-[8px] font-black text-green-500 uppercase tracking-widest mb-2">Your name</label>
                                     <input
                                         type="text"
-                                        placeholder="Identification"
+                                        placeholder="Your name"
                                         className="w-full bg-transparent text-white outline-none placeholder:text-gray-700 text-sm font-bold"
                                     />
                                 </div>
                                 <div className="p-6 bg-[#0a0a0a] border-b border-white/10 focus-within:bg-[#111] transition-colors">
-                                    <label className="block text-[8px] font-black text-green-500 uppercase tracking-widest mb-2">Input_Email_Address</label>
+                                    <label className="block text-[8px] font-black text-green-500 uppercase tracking-widest mb-2">Email address</label>
                                     <input
                                         type="email"
-                                        placeholder="communication@node.com"
+                                        placeholder="you@example.com"
                                         className="w-full bg-transparent text-white outline-none placeholder:text-gray-700 text-sm font-bold"
                                     />
                                 </div>
                             </div>
 
                             <div className="p-6 bg-[#0a0a0a] focus-within:bg-[#111] transition-colors">
-                                <label className="block text-[8px] font-black text-green-500 uppercase tracking-widest mb-2">Transmission_Details</label>
+                                <label className="block text-[8px] font-black text-green-500 uppercase tracking-widest mb-2">Project details</label>
                                 <textarea
                                     rows={5}
                                     placeholder="We need a React Native expert to build..."
@@ -103,22 +102,22 @@ export default function Contact() {
                                 type="submit"
                                 className="w-full py-8 bg-green-500 hover:bg-green-400 text-black font-black uppercase tracking-[0.5em] text-xs flex items-center justify-center gap-4 transition-all active:scale-[0.98]"
                             >
-                                <FaPaperPlane /> Execute_Send
+                                <FaPaperPlane /> Send message
                             </button>
                         </form>
 
                         <p className="mt-6 text-[8px] text-gray-600 uppercase tracking-widest text-center">
-                            By clicking Execute, you agree to start something legendary.
+                            I&apos;ll get back to you as soon as I can.
                         </p>
                     </div>
                 </div>
 
                 {/* Footer Credits */}
                 <div className="mt-32 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-600 text-[10px] font-bold uppercase tracking-widest">
-                    <span>© 2025 Olawale_Portfolio_System</span>
+                    <span>© 2025 Olawale</span>
                     <div className="flex gap-8">
-                        <span>Built_with: React_Native_Web</span>
-                        <span>Design: Brutalist_V3</span>
+                        <span>Built with React Native and Next.js</span>
+                        <span>Designed with care</span>
                     </div>
                 </div>
             </div>

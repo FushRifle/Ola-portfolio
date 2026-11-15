@@ -38,10 +38,10 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="relative bg-[#050505] pt-24 pb-12 border-t border-white/5 font-mono overflow-hidden">
+        <footer className="relative overflow-hidden border-t border-white/5 bg-[#050505] pt-24 pb-12">
             {/* Background Data Decoration */}
             <div className="absolute top-0 right-0 p-10 opacity-[0.02] text-[120px] font-black leading-none select-none pointer-events-none">
-                BUILD LOG
+                OLAWALE
             </div>
 
             <div className="max-w-7xl mx-auto px-6 lg:pl-32 relative z-10">
@@ -52,12 +52,9 @@ export default function Footer() {
                         <h2 className="text-2xl font-black tracking-tighter text-white uppercase italic">
                             OLA<span className="text-green-500">WALE</span>
                             <span className="text-green-500 text-xl">.</span>
-                            <span className="w-fit text-[10px] font-black bg-white text-black px-2 py-0.5 tracking-[0.2em] transform group-hover:bg-green-500 transition-colors duration-300">
-                                DEV
-                            </span>
                         </h2>
                         <p className="text-gray-500 text-xs leading-relaxed max-w-[240px] uppercase">
-                            Engineering high-performance mobile architectures and scalable web protocols from Nigeria to the world.
+                            Building thoughtful mobile and web experiences from Nigeria to the world.
                         </p>
                         <div className="flex gap-2">
                             {[
@@ -100,10 +97,9 @@ export default function Footer() {
                         </div>
                     ))}
 
-                    {/* Technical Contact Block */}
                     <div>
                         <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-green-500 mb-8">
-                            Contact Protocol
+                            Get in touch
                         </h3>
                         <div className="space-y-1">
                             {contactInfo.map((item, index) => (

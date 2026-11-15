@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
 import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaPaperPlane } from 'react-icons/fa';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 export default function CTA() {
     const containerVariants = {
@@ -48,8 +51,8 @@ export default function CTA() {
                             Ready to Build <br /> <span className="text-white/20 italic">Something Amazing?</span>
                         </h2>
                         <p className="text-lg text-gray-400 max-w-xl leading-relaxed">
-                            Whether you need a high-performance mobile app, a scalable web architecture, just want to talk ?
-                            my line is open.
+                            Whether you need a mobile app, help improving an existing product, or simply want to talk,
+                            I would love to hear from you.
                         </p>
                     </motion.div>
 
@@ -87,36 +90,35 @@ export default function CTA() {
                         <div className="mb-12">
                             <h3 className="text-3xl font-black text-white uppercase tracking-tighter mb-4">Drop a Message</h3>
                             <p className="text-gray-500 text-sm italic uppercase tracking-widest">
-                                (Cat videos and memes are always welcome.)
+                                Tell me a little about what you are building.
                             </p>
                         </div>
 
                         <form className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
-                                <input
+                                <Input
                                     type="text"
                                     placeholder="Your Name"
                                     className="w-full p-4 bg-white/5 border border-white/10 text-white text-sm outline-none focus:border-green-500 transition-colors"
                                 />
-                                <input
+                                <Input
                                     type="email"
                                     placeholder="Your Email"
                                     className="w-full p-4 bg-white/5 border border-white/10 text-white text-sm outline-none focus:border-green-500 transition-colors"
                                 />
                             </div>
-                            <textarea
+                            <Textarea
                                 placeholder="Describe your project vision..."
                                 className="w-full p-4 bg-white/5 border border-white/10 text-white text-sm outline-none focus:border-green-500 transition-colors resize-none"
                                 rows={5}
                             />
-                            <motion.button
+                            <Button
                                 type="submit"
-                                className="w-full py-5 bg-green-500 text-black font-black uppercase tracking-[0.4em] text-xs flex items-center justify-center gap-3 hover:bg-green-400 transition-all"
-                                whileTap={{ scale: 0.98 }}
+                                className="h-auto w-full bg-green-500 py-5 text-xs font-black uppercase tracking-[0.4em] text-black hover:bg-green-400"
                             >
                                 <FaPaperPlane />
                                 REACH OUT
-                            </motion.button>
+                            </Button>
                         </form>
 
                         {/* Social Matrix */}
