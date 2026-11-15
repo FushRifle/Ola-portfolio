@@ -208,7 +208,7 @@ export default function Hero() {
 
                                 <div className="relative w-full h-full bg-zinc-900 border-2 border-white overflow-hidden group">
                                     <img
-                                        src="/images/ola.png"
+                                        src="/images/Ola.png"
                                         alt="Olawale"
                                         className="w-full h-full object-cover grayscale brightness-75 contrast-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500"
                                     />
