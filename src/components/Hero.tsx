@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import Head from 'next/head';
-import { Link as ScrollLink } from 'react-scroll';
 import {
     FaDownload, FaGithub, FaLinkedinIn, FaTwitter,
     FaArrowRight, FaCode, FaLayerGroup, FaBolt
@@ -60,41 +59,32 @@ export default function Hero() {
                 {/* Navbar: Floating Brutalist Bar */}
                 <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-[100] w-[90%] max-w-5xl">
                     <div className="bg-[#111] border-2 border-green-500/50 p-4 flex items-center justify-between shadow-[8px_8px_0px_0px_rgba(34,197,94,0.2)]">
-                        <ScrollLink
-                            to="home"
-                            smooth={true}
-                            duration={500}
-                            className="flex items-center gap-2 cursor-pointer group"
-                        >
+                        <a href="#about" className="flex items-center gap-2 cursor-pointer group">
                             <div className="flex flex-col lg:flex-row lg:items-center gap-0 lg:gap-1">
                                 <h2 className="text-2xl font-black tracking-tighter text-white uppercase italic">
                                     OLA<span className="text-green-500">WALE</span>
                                     <span className="text-green-500 text-xl">.</span>
                                 </h2>
                             </div>
-                        </ScrollLink>
+                        </a>
 
                         <div className="hidden md:flex gap-8 text-[10px] font-black uppercase tracking-widest">
-                            {['About', 'Services', 'Projects',].map((item) => (
-                                <ScrollLink key={item} to={item.toLowerCase()} smooth className="hover:text-green-500 transition-all cursor-pointer">
+                            {['About', 'Services', 'Projects'].map((item) => (
+                                <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-green-500 transition-all cursor-pointer">
                                     {item}
-                                </ScrollLink>
+                                </a>
                             ))}
                         </div>
 
-                        <ScrollLink
-                            to='contact'
-                            smooth={true}
-                            duration={500}
-                        >
-                            <button className="bg-green-500 text-black px-4 py-1 text-xs font-black uppercase cursor-pointer
+                        <a
+                            href="#contact"
+                            className="bg-green-500 text-black px-4 py-1 text-xs font-black uppercase cursor-pointer
                             hover:translate-x-1 hover:-translate-y-1 
                             transition-transform 
                             shadow-[-4px_4px_0px_0px_rgba(255,255,255,1)]"
-                            >
-                                Contact
-                            </button>
-                        </ScrollLink>
+                        >
+                            Contact
+                        </a>
 
                     </div>
                 </nav>
